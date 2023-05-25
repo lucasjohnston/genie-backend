@@ -1,0 +1,67 @@
+{
+  "name": "genie-backend",
+  "description": "tbc",
+  "version": "1.0.0",
+  "author": "lucasjohnston <developing@lucasco.de>",
+  "private": "true",
+  "scripts": {
+    "start": "npx ts-node -r tsconfig-paths src/index.ts",
+    "dev": "export DEBUG=\"*\" && ts-node-dev --respawn src/index.ts",
+    "update": "npx npm-check-updates -p yarn -u",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@pinecone-database/pinecone": "^0.1.6",
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.13",
+    "@types/deep-equal": "^1.0.1",
+    "@types/errorhandler": "^1.5.0",
+    "@types/node": "^20.2.3",
+    "@types/node-fetch": "^2.6.4",
+    "@types/uuid": "^9.0.1",
+    "@types/validator": "^13.7.17",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "@zilliz/milvus2-sdk-node": "^2.2.10",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "deep-equal": "^2.2.1",
+    "dotenv": "^16.0.3",
+    "errorhandler": "^1.5.1",
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "husky": "^8.0.3",
+    "joiful": "^3.0.2",
+    "langchain-gpt4all": "^0.0.74",
+    "lint-staged": "^13.2.2",
+    "moment": "^2.29.4",
+    "node-fetch": "^3.3.1",
+    "prettier": "^2.8.8",
+    "reflect-metadata": "^0.1.13",
+    "ts-enums": "^0.0.6",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.5.2",
+    "typescript": "^5.0.4",
+    "uuid": "^9.0.0",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
